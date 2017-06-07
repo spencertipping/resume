@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage{color}
+\usepackage{paratype}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage[T1]{fontenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks]{hyperref}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1em}
+
+\newcommand{\sbound}{\vspace{2mm}}
+\newcommand{\ssbound}{\vspace{1mm}}
+\newcommand{\gray}[1]{\textcolor[rgb]{0.4,0.4,0.4}{#1}}
+\newcommand{\grayrule}{\color[rgb]{0.6,0.6,0.6}{\vrule}}
+\newcommand{\ongoing}[1]{\makebox[0\width][r]{\gray{//}~~}#1}
+\newcommand{\past}[1]{\makebox[0\width][r]{\gray{/}~~}#1}
+\newcommand{\bigjob}[2]{\ongoing{#1}\hfill\gray{#2}\sbound}
+\newcommand{\smalljob}[2]{\past{#1}\hfill\gray{#2}\ssbound}
+
+\pagestyle{empty}
+
+\newcommand{\lnk}[2]{\href{#1}{\textcolor[rgb]{1.0,0.3,0.0}{#2}}}%
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+\newcommand{\ws}{\hbox{~~~~}}
+\newcommand{\topic}[1]{\gray{#1}}
+\newcommand{\thing}{\ws$\cdot$~}
+
+\begin{document}
+
+spencer tipping \hfill\lnk{mailto:spencer.tipping@gmail.com}{spencer.tipping@gmail.com}
+
+\bigjob{open source : \lnk{https://github.com/spencertipping}{github.com/spencertipping}}{2009 - present} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{data science}
+  & GPS multipath error + satellite tracking & & \lnk{http://spencertipping.com/gps}{spencertipping.com/gps} \\
+  & Audio spectral visualization             & & \lnk{http://spencertipping.com/niaudio}{spencertipping.com/niaudio} \\
+  & 3D trilateration for cell phones         & & \lnk{http://spencertipping.com/sonar}{spencertipping.com/sonar} \sbound \\
+\topic{infrastructure}
+  & ni:~fast data processing + visualization & & \lnk{http://spencertipping.com/ni}{spencertipping.com/ni} \\
+  & Caterwaul:~a Javascript recompiler       & & \lnk{http://spencertipping.com/caterwaul}{spencertipping.com/caterwaul} \\
+  & JIT in machine code                      & & \lnk{http://spencertipping.com/canard}{spencertipping.com/canard} \\
+  & Self-modifying Perl                      & & \lnk{http://spencertipping.com/smperl}{spencertipping.com/smperl} \\
+  & An improved {\tt cd} command for bash    & & \lnk{http://spencertipping.com/cd}{spencertipping.com/cd} \\
+  & Lisp in bash                             & & \lnk{http://spencertipping.com/blambda}{spencertipping.com/blambda} \sbound \\
+\topic{classes/tutorials}
+  & How to write a UNIX shell                & & \lnk{http://spencertipping.com/shellhowto}{spencertipping.com/shellhowto} \\
+  & How to write a JIT compiler              & & \lnk{http://spencertipping.com/jithowto}{spencertipping.com/jithowto} \\
+  & Javascript in Ten Minutes                & & \lnk{http://spencertipping.com/js10}{spencertipping.com/js10} \\
+  & Information theory in Ten Minutes        & & \lnk{http://spencertipping.com/it10}{spencertipping.com/it10} \\
+\end{tabularx}
+
+\bigjob{Factual : \lnk{https://factual.com}{factual.com}}{2012.08 - present} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{research}
+  & Fourier transform for geodata forensics  & & \lnk{http://spencertipping.com/fraud1}{spencertipping.com/fraud1} \\
+  & Statistical fraud detection              & & \lnk{http://spencertipping.com/fraud2}{spencertipping.com/fraud2} \\
+  & Polygon compression                      & & \lnk{http://spencertipping.com/polycomp}{spencertipping.com/polycomp} \sbound \\
+\topic{infrastructure}
+  & Data pipeline performance                & & \lnk{http://spencertipping.com/pipeline}{spencertipping.com/pipeline} \\
+  & Fast bitwise geohash encoding            & & \lnk{http://spencertipping.com/geohash}{spencertipping.com/geohash} \\
+  & Fast indirect sorting in Java            & & \lnk{http://spencertipping.com/javasort}{spencertipping.com/javasort} \\
+  & nfu:~fast medium-data processing         & & \lnk{http://spencertipping.com/nfu}{spencertipping.com/nfu} \sbound \\
+\topic{global places}
+  & Ontological bias + correction for categories & & \\
+  & Fast entropy-based entity resolution & & \sbound \\
+\topic{geopulse}
+  & Core processing pipeline (Hadoop + Clojure) & & \\
+  & Insights processing pipeline (Hadoop + ni) & & \\
+  & Automatic fraud detection + blacklisting & & \\
+  & Cryptographically secure differential privacy & & \\
+  & Behavioral model validation + analysis & & \sbound \\
+\topic{engine}
+  & Wavelet-based accelerometer parsing & & \\
+  & Place attachment QA + training data & & \\
+  & Competitive product strategy & & \\
+\end{tabularx}
+
+\smalljob{Google : \lnk{https://google.com}{google.com}}{2011.11 - 2012.04} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{tech talks}
+  & V8 JIT performance & & \lnk{http://spencertipping.com/v8perf}{spencertipping.com/v8perf} \\
+\topic{google groups}
+  & Accessibility design + implementation & & \\
+\end{tabularx}
+
+\smalljob{Social Media Networks : \lnk{http://socialmedia.com}{socialmedia.com}}{2010.01 - 2011.11} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{creative}
+  & Visual editor & & \lnk{http://spencertipping.com/vedit}{spencertipping.com/vedit} \\
+\topic{analytics}
+  & Internal dashboards + prototyping processes & & \\
+\end{tabularx}
+
+\smalljob{BorderStylo}{2009.01 - 2009.09} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{research}
+  & Content anchoring & & \lnk{http://spencertipping.com/capatent}{spencertipping.com/capatent} \\
+\topic{frontend}
+  & Tech lead for frontend team & & \lnk{http://spencertipping.com/jstc}{spencertipping.com/jstc} \\
+\end{tabularx}
+
+\smalljob{Truman State University : \lnk{http://truman.edu}{truman.edu}}{2005-2009, dropout, Math+CS 3.94/4 GPA} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
+\topic{research}
+  & Genetic simulation + statistics & & \lnk{http://spencertipping.com/2008nsf}{spencertipping.com/2008nsf} \\
+  & Airplane boarding + international first place & & \lnk{http://spencertipping.com/2007mcm}{spencertipping.com/2007mcm} \\
+\end{tabularx}
+
+\end{document}
