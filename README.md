@@ -27,3 +27,19 @@ but since reviewing candidate resumes I've developed a few:
 3. **Open source is a career.** Hopefully it's your longest one and the one
    that says the most about you; I put it at the top of my resume for those
    reasons.
+
+I've tried to implement these here (item 2 is easier if you own a domain, which
+I recommend in general -- doesn't have to be your name as long as it's easy to
+remember).
+
+## Please complain
+Someone's job search might be predicated on this repo offering a sensible
+starting point, so if it's suboptimal I want to know what should be fixed.
+Strongly-worded suggestions are welcome:
+
+- [Issues](https://github.com/spencertipping/resume/issues/new)
+- [@spencertipping](https://twitter.com/spencertipping)
+- [spencer.tipping@gmail.com](mailto:spencer.tipping@gmail.com)
+
+I'll keep a [log](feedback.md) of these suggestions and what changed as a
+result.
