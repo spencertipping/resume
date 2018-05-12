@@ -8,7 +8,7 @@ license as usual).
 On Ubuntu:
 
 ```sh
-$ apt install texlive-full
+$ apt install texlive-latex-base texlive-fonts-extra
 $ pdflatex resume.tex
 ```
 
