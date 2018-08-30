@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $USER == spencertipping ]]; then
+  docker build -t spencertipping/resume .
+  docker push spencertipping/resume
+fi
+
+docker run -v "$PWD:/data" -e UID=$UID -t spencertipping/resume

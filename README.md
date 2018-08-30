@@ -2,14 +2,18 @@
 Feel free to use this as a starting point for building a resume in TeX (MIT
 license as usual).
 
-![image](http://storage2.static.itmages.com/i/17/0607/h_1496843745_3826073_1e1e2f23de.png)
-
 ## Compiling
 On Ubuntu:
 
 ```sh
 $ apt install texlive-latex-base texlive-fonts-extra
 $ pdflatex resume.tex
+```
+
+Alternatively (which is automated for you in `./build`):
+
+```sh
+$ docker run --rm -v "$PWD:/data" -e UID=$UID -t spencertipping/resume
 ```
 
 ## Design
