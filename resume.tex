@@ -13,15 +13,16 @@
 \setlength{\parskip}{1em}
 
 % TODO: document these macros
+\newcommand{\ssbound}{\vspace{0.75mm}}
 \newcommand{\sbound}{\vspace{1.5mm}}
 \newcommand{\gray}[1]{\textcolor[rgb]{0.4,0.4,0.4}{#1}}
 \newcommand{\grayrule}{\color[rgb]{0.6,0.6,0.6}{\vrule}}
 \newcommand{\ongoing}[2]{\makebox[0\width][r]{{#1}~~}{#2}}
 \newcommand{\past}[2]{\makebox[0\width][r]{{#1}~~}{#2}}
-\newcommand{\currentjob}[4]{\ongoing{#3}{{\bf #2} \gray{::} #1}\hfill\gray{#4}}
-\newcommand{\pastjob}[4]{\past{#3}{{\bf #2} \gray{::} #1}\hfill\gray{#4}}
+\newcommand{\currentjob}[4]{\ongoing{#3}{{\bf #2} : #1}\hfill\gray{#4}}
+\newcommand{\pastjob}[4]{\past{#3}{{\bf #2} : #1}\hfill\gray{#4}}
 
-\newcommand{\current}[3]{\ongoing{#2}{\bf #1}\hfill\gray{#3}}
+\newcommand{\current}[4]{\ongoing{#3}{\bf #2}{#1}\hfill\gray{#4}}
 
 \pagestyle{empty}
 
@@ -37,7 +38,7 @@
 
 spencer tipping \hfill505.730.8034 \gray{//} \lnk{mailto:spencer.tipping@gmail.com}{spencer.tipping@gmail.com}
 
-\current{open source}{\lnk{https://github.com/spencertipping}{github}}{2009 - present} \sbound \\
+\current{~: \lnk{http://spencertipping.com}{spencertipping.com}}{open source}{\lnk{https://github.com/spencertipping}{github}}{2009 - present} \ssbound \\
 A mixture of applied projects and independent research, often compilers and data
 processing tools. More recently I've focused on electrical and mechanical
 engineering to start a robotics company. \sbound \\
@@ -48,9 +49,10 @@ engineering to start a robotics company. \sbound \\
   & Caterwaul:~a Javascript recompiler        & & \lnk{http://spencertipping.com/caterwaul}{spencertipping.com/caterwaul} \\
   & An improved {\tt cd} command for bash     & & \lnk{http://spencertipping.com/cd}{spencertipping.com/cd} \\
   & Lisp in bash                              & & \lnk{http://spencertipping.com/blambda}{spencertipping.com/blambda} \sbound \\
-\topic{research}
+\topic{infrastructure}
+  & Datacenter build                          & & \lnk{http://spencertipping.com/datacenter}{spencertipping.com/datacenter} \sbound \\
+\topic{experiments}
   & GPS multipath error + satellite tracking  & & \lnk{http://spencertipping.com/gps}{spencertipping.com/gps} \\
-  & Audio spectral visualization              & & \lnk{http://spencertipping.com/niaudio}{spencertipping.com/niaudio} \\
   & 3D sonar trilateration for cell phones    & & \lnk{http://spencertipping.com/sonar}{spencertipping.com/sonar} \sbound \\
 \topic{classes/tutorials}
   & How to write a UNIX shell                 & & \lnk{http://spencertipping.com/shellhowto}{spencertipping.com/shellhowto} \\
@@ -59,7 +61,7 @@ engineering to start a robotics company. \sbound \\
   & Information theory in Ten Minutes         & & \lnk{http://spencertipping.com/it10}{spencertipping.com/it10} \\
 \end{tabularx}
 
-\pastjob{data scientist}{Factual}{\lnk{https://factual.com}{factual.com}}{2012/Aug - 2018/May} \sbound\\
+\pastjob{data scientist}{Factual}{\lnk{https://factual.com}{factual.com}}{2012/Aug - 2018/May} \ssbound \\
 Initially hired as a software engineer, but ended up taking on ad-hoc data
 science work and developing the role. Although remote, I worked
 cross-functionally on product management, business strategy, and hiring.
@@ -99,7 +101,7 @@ Lead client-side developer and project owner for the visual ad editor:~\lnk{http
 \pastjob{lead software engineer}{Border Stylo}{\gray{(inactive)}}{2009/Jan - 2009/Sep} \\
 Lead frontend engineer, co-inventor of the content anchoring patent:~\lnk{http://spencertipping.com/capatent}{spencertipping.com/capatent}.
 
-\pastjob{math+CS}{Truman State University}{\lnk{http://truman.edu}{truman.edu}}{2005-2009, dropped out, 3.94/4 GPA} \\
+\pastjob{math+CS major}{Truman State University}{\lnk{http://truman.edu}{truman.edu}}{2005-2009, dropped out, 3.94/4 GPA} \\
 \begin{tabularx}{\textwidth}{@{}llXl!{}}
 \topic{mathematical modeling}
   & MathBio:~evolutionary drift & & \lnk{http://spencertipping.com/2008nsf}{spencertipping.com/2008nsf} \\
