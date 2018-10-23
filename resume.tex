@@ -12,14 +12,16 @@
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{1em}
 
-\newcommand{\sbound}{\vspace{2mm}}
-\newcommand{\ssbound}{\vspace{1mm}}
+% TODO: document these macros
+\newcommand{\sbound}{\vspace{1.5mm}}
 \newcommand{\gray}[1]{\textcolor[rgb]{0.4,0.4,0.4}{#1}}
 \newcommand{\grayrule}{\color[rgb]{0.6,0.6,0.6}{\vrule}}
-\newcommand{\ongoing}[1]{\makebox[0\width][r]{\gray{//}~~}#1}
-\newcommand{\past}[1]{\makebox[0\width][r]{\gray{/}~~}#1}
-\newcommand{\currentjob}[2]{\ongoing{#1}\hfill\gray{#2}\sbound}
-\newcommand{\pastjob}[2]{\past{#1}\hfill\gray{#2}\ssbound}
+\newcommand{\ongoing}[2]{\makebox[0\width][r]{{#1}~~}{#2}}
+\newcommand{\past}[2]{\makebox[0\width][r]{{#1}~~}{#2}}
+\newcommand{\currentjob}[4]{\ongoing{#3}{{\bf #2} \gray{::} #1}\hfill\gray{#4}}
+\newcommand{\pastjob}[4]{\past{#3}{{\bf #2} \gray{::} #1}\hfill\gray{#4}}
+
+\newcommand{\current}[3]{\ongoing{#2}{\bf #1}\hfill\gray{#3}}
 
 \pagestyle{empty}
 
@@ -35,81 +37,73 @@
 
 spencer tipping \hfill505.730.8034 \gray{//} \lnk{mailto:spencer.tipping@gmail.com}{spencer.tipping@gmail.com}
 
-\currentjob{open source : \lnk{https://github.com/spencertipping}{github.com/spencertipping}}{2009 - present} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{data science}
-  & GPS multipath error + satellite tracking & & \lnk{http://spencertipping.com/gps}{spencertipping.com/gps} \\
-  & Audio spectral visualization             & & \lnk{http://spencertipping.com/niaudio}{spencertipping.com/niaudio} \\
-  & 3D trilateration for cell phones         & & \lnk{http://spencertipping.com/sonar}{spencertipping.com/sonar} \sbound \\
-\topic{infrastructure}
-  & phi:~FORTH+Smalltalk+Lisp in machine code& & \lnk{http://spencertipping.com/phi}{spencertipping.com/phi} \\
-  & ni:~fast data processing + visualization & & \lnk{http://spencertipping.com/ni}{spencertipping.com/ni} \\
-  & Caterwaul:~a Javascript recompiler       & & \lnk{http://spencertipping.com/caterwaul}{spencertipping.com/caterwaul} \\
-  & Self-modifying Perl                      & & \lnk{http://spencertipping.com/smperl}{spencertipping.com/smperl} \\
-  & An improved {\tt cd} command for bash    & & \lnk{http://spencertipping.com/cd}{spencertipping.com/cd} \\
-  & Lisp in bash                             & & \lnk{http://spencertipping.com/blambda}{spencertipping.com/blambda} \sbound \\
+\current{open source}{\lnk{https://github.com/spencertipping}{github}}{2009 - present} \sbound \\
+A mixture of applied projects and independent research, often compilers and data
+processing tools. More recently I've focused on electrical and mechanical
+engineering to start a robotics company. \sbound \\
+\begin{tabularx}{\textwidth}{@{}llXl!{}}
+\topic{computer science}
+  & ni:~fast data processing + visualization  & & \lnk{http://spencertipping.com/ni}{spencertipping.com/ni} \\
+  & phi:~FORTH+Smalltalk+Lisp in machine code & & \lnk{http://spencertipping.com/phi}{spencertipping.com/phi} \\
+  & Caterwaul:~a Javascript recompiler        & & \lnk{http://spencertipping.com/caterwaul}{spencertipping.com/caterwaul} \\
+  & An improved {\tt cd} command for bash     & & \lnk{http://spencertipping.com/cd}{spencertipping.com/cd} \\
+  & Lisp in bash                              & & \lnk{http://spencertipping.com/blambda}{spencertipping.com/blambda} \sbound \\
+\topic{research}
+  & GPS multipath error + satellite tracking  & & \lnk{http://spencertipping.com/gps}{spencertipping.com/gps} \\
+  & Audio spectral visualization              & & \lnk{http://spencertipping.com/niaudio}{spencertipping.com/niaudio} \\
+  & 3D sonar trilateration for cell phones    & & \lnk{http://spencertipping.com/sonar}{spencertipping.com/sonar} \sbound \\
 \topic{classes/tutorials}
-  & How to write a UNIX shell                & & \lnk{http://spencertipping.com/shellhowto}{spencertipping.com/shellhowto} \\
-  & How to write a JIT compiler              & & \lnk{http://spencertipping.com/jithowto}{spencertipping.com/jithowto} \\
-  & Javascript in Ten Minutes                & & \lnk{http://spencertipping.com/js10}{spencertipping.com/js10} \\
-  & Information theory in Ten Minutes        & & \lnk{http://spencertipping.com/it10}{spencertipping.com/it10} \\
+  & How to write a UNIX shell                 & & \lnk{http://spencertipping.com/shellhowto}{spencertipping.com/shellhowto} \\
+  & How to write a JIT compiler               & & \lnk{http://spencertipping.com/jithowto}{spencertipping.com/jithowto} \\
+  & Javascript in Ten Minutes                 & & \lnk{http://spencertipping.com/js10}{spencertipping.com/js10} \\
+  & Information theory in Ten Minutes         & & \lnk{http://spencertipping.com/it10}{spencertipping.com/it10} \\
 \end{tabularx}
 
-\pastjob{Factual : \lnk{https://factual.com}{factual.com}}{2012.08 - 2018.05} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{research}
-  & Fourier transform for geodata forensics  & & \lnk{http://spencertipping.com/fraud1}{spencertipping.com/fraud1} \\
-  & Statistical fraud detection              & & \lnk{http://spencertipping.com/fraud2}{spencertipping.com/fraud2} \\
-  & Polygon compression                      & & \lnk{http://spencertipping.com/polycomp}{spencertipping.com/polycomp} \sbound \\
-\topic{infrastructure}
-  & Data pipeline performance                & & \lnk{http://spencertipping.com/pipeline}{spencertipping.com/pipeline} \\
-  & Fast bitwise geohash encoding            & & \lnk{http://spencertipping.com/geohash}{spencertipping.com/geohash} \\
-  & Fast indirect sorting in Java            & & \lnk{http://spencertipping.com/javasort}{spencertipping.com/javasort} \\
-  & nfu:~fast medium-data processing         & & \lnk{http://spencertipping.com/nfu}{spencertipping.com/nfu} \sbound \\
+\pastjob{data scientist}{Factual}{\lnk{https://factual.com}{factual.com}}{2012/Aug - 2018/May} \sbound\\
+Initially hired as a software engineer, but ended up taking on ad-hoc data
+science work and developing the role. Although remote, I worked
+cross-functionally on product management, business strategy, and hiring.
+Started Factual's mentorship program. Colleagues described me as ``unblockable''
+and ``a force of nature.'' \sbound \\
+\begin{tabularx}{\textwidth}{@{}llXl!{}}
+\topic{computer science}
+  & Data pipeline performance               & & \lnk{http://spencertipping.com/pipeline}{spencertipping.com/pipeline} \\
+  & Fast bitwise geohash encoding           & & \lnk{http://spencertipping.com/geohash}{spencertipping.com/geohash} \\
+  & Fast indirect sorting in Java           & & \lnk{http://spencertipping.com/javasort}{spencertipping.com/javasort} \\
+  & nfu:~fast medium-data processing        & & \lnk{http://spencertipping.com/nfu}{spencertipping.com/nfu} \sbound \\
+\topic{data science}
+  & Fourier transform for geodata forensics & & \lnk{http://spencertipping.com/fraud1}{spencertipping.com/fraud1} \\
+  & Statistical fraud detection             & & \lnk{http://spencertipping.com/fraud2}{spencertipping.com/fraud2} \\
+  & Polygon compression                     & & \lnk{http://spencertipping.com/polycomp}{spencertipping.com/polycomp} \sbound \\
 \topic{global places}
-  & Ontological bias + correction for categories & & \\
-  & Fast entropy-based entity resolution & & \sbound \\
+  & Ontological bias + correction for categories  & & \gray{dev+research lead} \\
+  & Fast entropy-based entity resolution          & & \gray{dev+research lead} \sbound \\
 \topic{geopulse}
-  & Core processing pipeline (Hadoop + Clojure) & & \\
-  & Insights processing pipeline (Hadoop + ni) & & \\
-  & Automatic fraud detection + blacklisting & & \\
-  & Cryptographically secure differential privacy & & \\
-  & Behavioral model validation + analysis & & \sbound \\
-\topic{engine}
-  & Wavelet-based accelerometer parsing & & \\
-  & Place attachment QA + training data & & \\
-  & Competitive product strategy & & \\
+  & Core processing pipeline (Hadoop + Clojure)   & & \gray{dev+design lead} \\
+  & Automatic fraud detection + blacklisting      & & \gray{dev+research lead} \\
+  & Insights processing pipeline (Hadoop + ni)    & & \gray{product+dev owner} \\
+  & Cryptographically secure differential privacy & & \gray{product+dev owner} \\
+  & Behavioral model validation + analysis        & & \gray{research lead} \sbound \\
+\topic{engine (mobile)}
+  & Wavelet-based accelerometer parsing & & \gray{research+prototyping lead} \\
+  & Place attachment QA + training data & & \gray{research lead} \\
 \end{tabularx}
 
-\pastjob{Google : \lnk{https://google.com}{google.com}}{2011.11 - 2012.04} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{tech talks}
-  & V8 JIT performance & & \lnk{http://spencertipping.com/v8perf}{spencertipping.com/v8perf} \\
-\topic{google groups}
-  & Accessibility design + implementation & & \\
-\end{tabularx}
+\pastjob{software engineer}{Google}{\lnk{https://google.com}{google.com}}{2011/Nov - 2012/Apr} \\
+Google Groups developer focused on accessibility. \\
+Gave a tech talk on V8 compiler performance:~\lnk{http://spencertipping.com/v8perf}{spencertipping.com/v8perf}.
 
-\pastjob{Social Media Networks : \lnk{http://socialmedia.com}{socialmedia.com}}{2010.01 - 2011.11} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{creative}
-  & Visual editor & & \lnk{http://spencertipping.com/vedit}{spencertipping.com/vedit} \\
-\topic{analytics}
-  & Internal dashboards + prototyping processes & & \\
-\end{tabularx}
+\pastjob{lead software engineer}{Social Media Networks}{\lnk{https://socialmedia.com}{(acquired)}}{2010/Jan - 2011/Nov} \\
+Lead client-side developer and project owner for the visual ad editor:~\lnk{http://spencertipping.com/vedit}{spencertipping.com/vedit}.
 
-\pastjob{BorderStylo}{2009.01 - 2009.09} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{research}
-  & Content anchoring & & \lnk{http://spencertipping.com/capatent}{spencertipping.com/capatent} \\
-\topic{frontend}
-  & Tech lead for frontend team & & \lnk{http://spencertipping.com/jstc}{spencertipping.com/jstc} \\
-\end{tabularx}
+\pastjob{lead software engineer}{Border Stylo}{\gray{(inactive)}}{2009/Jan - 2009/Sep} \\
+Lead frontend engineer, co-inventor of the content anchoring patent:~\lnk{http://spencertipping.com/capatent}{spencertipping.com/capatent}.
 
-\pastjob{Truman State University : \lnk{http://truman.edu}{truman.edu}}{2005-2009, dropout, Math+CS 3.94/4 GPA} \\
-\begin{tabularx}{\textwidth}{@{}llXl!{\grayrule}}
-\topic{research}
-  & Genetic simulation + statistics & & \lnk{http://spencertipping.com/2008nsf}{spencertipping.com/2008nsf} \\
-  & Airplane boarding + international first place & & \lnk{http://spencertipping.com/2007mcm}{spencertipping.com/2007mcm} \\
+\pastjob{math+CS}{Truman State University}{\lnk{http://truman.edu}{truman.edu}}{2005-2009, dropped out, 3.94/4 GPA} \\
+\begin{tabularx}{\textwidth}{@{}llXl!{}}
+\topic{mathematical modeling}
+  & MathBio:~evolutionary drift & & \lnk{http://spencertipping.com/2008nsf}{spencertipping.com/2008nsf} \\
+  & MAA competition:~airplane boarding & & \lnk{http://spencertipping.com/2007mcm}{spencertipping.com/2007mcm} \\
 \end{tabularx}
 
 \end{document}
